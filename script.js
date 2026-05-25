@@ -252,7 +252,8 @@ const esseTrechoNaoExiste = textinho.includes(
 ); // false
 
 
-
+//Ao clicar, faça aparecer em um alert um texto informando origem, ano de reconhecimento e temperamento;
+//Crie um botão para pintar de vermelho o fundo dos itens de gatos que soltam pelo
 const gatosDiv = document.querySelector("#gatos");
 const button = document.querySelector("#button");
 
@@ -276,6 +277,8 @@ function destaqueSoltaPelo() {
 button?.addEventListener('click', destaqueSoltaPelo);
 
 //Crie um botão para pintar de azul o fundo dos itens de gato cuja origem são os Estados Unidos
+const buttonEua = document.querySelector("#button-eua");
+buttonEua?.addEventListener('click', destaqueEua);
 function destaqueEua() {
   gatosEls.forEach((el, idx) => {
     el.style.backgroundColor = catCatalog[idx].origem === "Estados Unidos" ? 'blue' : '';
